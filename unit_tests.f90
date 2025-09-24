@@ -115,7 +115,7 @@ variablesvalues(9) = 0.120  ! d
 variablesvalues(11) = 0.140 ! f
 
 func = 'cosh(log(abs(y*z+x**2+x1**x2)))+a*d*(exp(c*f)+154.3)'
-expected = 20.69617
+expected = 20.696168449581393
 
 call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
 
@@ -173,8 +173,8 @@ end if
 contains
 
 subroutine test_expression(expression, var_names, var_values, expected_result, tol, test_num, pass_num)
-    character(len=*), intent(in) :: expression
-    character(len=10), dimension(:), intent(in) :: var_names
+    character(len=*), intent(inout) :: expression
+    character(len=10), dimension(:), intent(inout) :: var_names
     real(realkind), dimension(:), intent(in) :: var_values
     real(realkind), intent(in) :: expected_result
     real(realkind), intent(in) :: tol
