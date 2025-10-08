@@ -1,5 +1,5 @@
 <p align="center">
-<h1>AN EXPRESSION EVALUATOR / INTERPRETER / PARSER IN FORTRAN</h1>
+<h1>🌟 AN EXPRESSION EVALUATOR / INTERPRETER / PARSER IN FORTRAN</h1>
 </p>
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ivomarb/Fortran-Expression-Evaluator?color=ffcc66&style=for-the-badge)
@@ -248,7 +248,7 @@ Developed parser time (LABFit): 24.518s
 </br >
 From the analysis of the data presented in section V, it is possible to notice that the developed expression evaluator showed, for the desirable requirements, a performance superior than the other two existing ones, in all performed tests. In this way, the parser was not only used at the software LABFit, but is also being made available on the internet for the free utilization by the interested ones. The parser developers believe, along with the others ones involved in similar projects, in having helped to fill a gap in the libraries of Fortran, which is a language still quite used nowadays by engineers and scientists.</br >
 
-# References
+# 📚 References
 </br >
 [1] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
         Publishing Company, pp. 203 – 208, 1987.</br >
@@ -273,12 +273,16 @@ From the analysis of the data presented in section V, it is possible to notice t
 [12] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
 
 
-# Other Resources
+# 📚 Other Resources
 
 * The [Calmat: a Fortran Equation Parser Involving Matrix Operations](https://github.com/hassaniriad/calmat) is based on this interpreter.
 * If you are using the Fortran Expression Evaluator please let us know! Emails are in the test.f90 file. Mark star ⭐ if you like the project.
 
-# License
+## 🌟 Thank you
+
+* [Prof. Wilton Pereira da Silva](https://scholar.google.com/citations?view_op=search_authors&mauthors=wilton+pereira+da+silva&hl=pt-BR&oi=ao) for being such an amazing advisor.
+
+# 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
