@@ -101,12 +101,14 @@ For the purposes of the development of a parser, it should initially be stated t
 </br >
 All the previous items can be combined, obeying the algebra rules, to form mathematical expressions. Next, there are some examples: </br >
 </br >
+
 ```bash
 1/(a+b*x**(c-1) + 4.321)
 a+(b-a)/(1+exp(-c*(x-d)))
 a+b*log(x1)+c*log(x1)**2+d*log(x2)+e*log(x2)**2
 (x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*cos(x)+y*sin(y)+z*tan(z)*2/(x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*cos(x)+y*sin(y)+z*tan(z))*3+sqrt(x*y*z+x+y+z)*log10(sqrt(x*2+y*2+z*2)+x+y+z))
 ```
+
 </br >
 At the development of a parser, an important concept is the operators and functions precedence [1]. Such concept states which operation must be performed first and, therefore, defines the sequence in which the operations must be executed with the purpose to obtain a correct evaluation of the interpreted expression. For the purposes of this evaluator it was assumed the precedence presented in Table 1.</br>
 </br>
