@@ -273,6 +273,22 @@ From the analysis of the data presented in section V, it is possible to notice t
 [12] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
 
 
+## 📁 Project Structure
+
+```
+Fortran-Expression-Evaluator
+├── INSTRUCTIONS.md                                            # Instructions on how to run the interpreter
+├── interpreter.f90                                            # Interpreter source code
+├── LICENSE                                                    # MIT License File
+├── papers
+│   ├── Artigo - Um Avaliador de Expressoes em Fortran.pdf     # Published paper about the interpreter in portuguese
+│   └── Paper - A Fortran Expression Evaluator.pdf             # Published paper about the interpreter in english  
+├── README.md                                                  # This Readme
+├── test.f90                                                   # Some testing functions (left here for historical purposes)   
+└── unit_tests.f90                                             # Unit tests     
+```
+
+
 # 📚 Other Resources
 
 * The [Calmat: a Fortran Equation Parser Involving Matrix Operations](https://github.com/hassaniriad/calmat) is based on this interpreter.
