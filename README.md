@@ -101,13 +101,16 @@ For the purposes of the development of a parser, it should initially be stated t
 </br >
 All the previous items can be combined, obeying the algebra rules, to form mathematical expressions. Next, there are some examples: </br >
 </br >
+```bash
 1/(a+b*x**(c-1) + 4.321)</br >
 a+(b-a)/(1+exp(-c*(x-d)))</br >
 a+b*log(x1)+c*log(x1)**2+d*log(x2)+e*log(x2)**2</br >
 (x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*cos(x)+y*sin(y)+z*tan(z)*2/(x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*cos(x)+y*sin(y)+z*tan(z))*3+sqrt(x*y*z+x+y+z)*log10(sqrt(x*2+y*2+z*2)+x+y+z))</br >
+```
 </br >
 At the development of a parser, an important concept is the operators and functions precedence [1]. Such concept states which operation must be performed first and, therefore, defines the sequence in which the operations must be executed with the purpose to obtain a correct evaluation of the interpreted expression. For the purposes of this evaluator it was assumed the precedence presented in Table 1.</br>
 </br>
+
 
 ![fortran2](https://user-images.githubusercontent.com/33180566/32405699-f38795b0-c148-11e7-8499-fa1c6ba6d87a.JPG)
 </br>
@@ -124,9 +127,11 @@ There are several possibilities to analyze and build a mathematical expression. 
 </br>
 </br>
 <p align="center">
+```bash
 Expression -> term [+term][-term];</br>
 Term -> factor [*factor][/factor];</br>
 Factor -> variable, number or (expression).</br>
+```
 </p>
 </br>
 At the terminology previously shown, the square brackets designate an optional element and the symbol “” means “produces”. Such rules are normally called “rules of expression production”. This way, it is possible to interpret the definition of a term as: “term produces factor multiplied by factor or factor divided by factor”. The operators’ precedence is implicit in the way how an expression is written. A parser must identify the priorities in the sequence of the operations and also must execute them in the identified sequence.
@@ -135,7 +140,9 @@ To illustrate the utilization of the rules presented above, take the expression 
 </br>
 The presented rules are the essence of a recursive descent analyzer, that is basically a set of functions mutually recursive that operate in a linked way. At each step, the analyzer executes the specified operations in the algebraically correct sequence. In order to have a concrete idea of how this process works, analyze the following expression: </br >
 <p align="center">
+```bash
 9/3 – (100 + 56)
+```
 </p>
 •	Initially the first term, 9/3, is taken. Then, each factor is taken and the integer division is executed. The result value is 3;</br > 
 •	The second term, (100+56) is taken. At this point, the second sub-expression is analyzed recursively. The two factors are taken and, then, added. The result value is 156; </br >
@@ -166,6 +173,7 @@ During the coding process of the parser its developers got known, through the in
 The tests consisted on the realization of five million iterations for twenty five distinct expressions, measuring the time that each evaluator took to perform such task. The tests were performed in a computer Intel Pentium III, 128 Mbytes of RAM memory and the compilation was done at the Compaq Visual Fortran (CVF 6.5) studio, using the QuickWin Application option. The elapsed time for the direct calculation, which takes the smallest execution time, of each compiled expression was also measured in order to have an idea of the slowness of a Fortran coded parser execution. The performance of the evaluators was analyzed only in terms of the elapsed time for the tasks execution, because the numerical results of all of them were equivalent and compatible with the numerical result of the compiled expression. Next, it will be shown the obtained results for five, among the twenty five, tested expressions. 
 </br>
 </br>
+```bash
 1st Expression:</br >
 (x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*cos(x)+y*sin(y)+z*tan(z)*2/(x+y+z+x*y+x*z+y*z+x/y+x/z+y/z+x*
 cos(x)+y*sin(y)+z*tan(z))*3+sqrt(x*y*z+x+y+z)*log10(sqrt(x*2+y*2+z*2)+x+y+z))</br >
@@ -175,7 +183,9 @@ Compiler direct calculation time: 9.644s</br >
 Developed parser time (LABFit): 48.119s</br >
 “Australian parser” time (Stuart Midgley): 178.060s</br >
 “German parser” time (Roland Schmehl): 77.681s</br >
+```
 </br>
+```bash
 2nd Expression:</br >
 a+b*x1</br >
 For a = 0.900, b = 0.100 e x1 = 0.508:</br >
@@ -184,7 +194,9 @@ Compiler direct calculation time: 0.080s</br >
 Developed parser time (LABFit): 1.872s</br >
 “Australian parser” time (Stuart Midgley): 22.242s</br >
 “German parser” time (Roland Schmehl): 3.205s</br >
+```
 </br>
+```bash
 3rd Expression:</br >
 cosh(log(abs(y*z+x**2+x1**x2)))+a*d*(exp(c*f)+154.3)</br >
 For x = 0.175, y = 0.110, z = 0.900, a = 0.900, c = 0.110, d = 0.120, f = 0.140, x1 = 0.508 and x2 = 30.000:</br >
@@ -193,7 +205,9 @@ Compiler direct calculation time: 7.150s</br >
 Developed parser time (LABFit): 17.114s</br >
 “Australian parser” time (Stuart Midgley): 59.876s</br >
 “German parser” time (Roland Schmehl): 23.664s</br >
+```
 </br>
+```bash
 4th Expression:</br >
 atan(sinh(log(abs(exp(z/x)*sqrt(y+a**c+f*e)))))</br >
 For x = 0.175, y = 0.110, z = 0.900, a = 0.900, c = 0.110, f = 0.140 and e = 0.130:</br >
@@ -202,7 +216,9 @@ Compiler direct calculation time: 9.533s</br >
 Developed parser time (LABFit): 15.573s</br >
 “Australian parser” time (Stuart Midgley): 53.958s</br >
 “German parser” time (Roland Schmehl): 20.359s</br >
+```
 </br>
+```bash
 5th Expression:</br >
 atan(sinh(log(abs(exp(z/x)*sqrt(y+a**c+f*e)))))*cos(log(abs(sqrt(y+a**c+f*e))))</br >
 For x = 0.175, y = 0.110, z = 0.900, a = 0.900, c = 0.110, f = 0.140 and e = 0.130:</br >
@@ -211,6 +227,7 @@ Compiler direct calculation time: 14.258s</br >
 Developed parser time (LABFit): 24.518s</br >
 “Australian parser” time (Stuart Midgley): 76.528s</br >
 “German parser” time (Roland Schmehl): 32.915s</br >
+```
 
 # VI - Conclusions
 </br >
