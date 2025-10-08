@@ -129,11 +129,13 @@ There are several possibilities to analyze and build a mathematical expression. 
 </br>
 </br>
 <p align="center">
+  
 ```bash
-Expression -> term [+term][-term];</br>
-Term -> factor [*factor][/factor];</br>
-Factor -> variable, number or (expression).</br>
+Expression -> term [+term][-term];
+Term -> factor [*factor][/factor];
+Factor -> variable, number or (expression).
 ```
+
 </p>
 </br>
 At the terminology previously shown, the square brackets designate an optional element and the symbol “” means “produces”. Such rules are normally called “rules of expression production”. This way, it is possible to interpret the definition of a term as: “term produces factor multiplied by factor or factor divided by factor”. The operators’ precedence is implicit in the way how an expression is written. A parser must identify the priorities in the sequence of the operations and also must execute them in the identified sequence.
