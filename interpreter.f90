@@ -1,7 +1,39 @@
+!===============================================================================
+! FILE: interpreter.f90
+!
+! DESCRIPTION:
+!   Mathematical expression parser and evaluator using Recursive Descent Parsing.
+!   This file contains modules and subroutines for parsing and evaluating
+!   mathematical expressions with support for variables, operators, and functions.
+!
+! MODULES:
+!   - precision: Defines double precision kind parameter for all real variables
+!   - interpreter: Main module for parsing and evaluating mathematical expressions
+!
+! MAIN FEATURES:
+!   - Tokenizes mathematical expression strings into analyzable components
+!   - Implements Recursive Descent Parsing algorithm for expression evaluation
+!   - Supports arithmetic operators: +, -, *, /, ^ (exponentiation)
+!   - Supports mathematical functions: sin, cos, tan, asin, acos, atan, sinh,
+!     cosh, tanh, sind, cosd, tand, log, log10, exp, sqrt, abs, floor, nint,
+!     anint, aint
+!   - Handles variables in expressions
+!   - Provides error detection for malformed expressions
+!   - Offers two evaluation modes: standard and detailed (with error checking)
+!
+! USAGE:
+!   1. Call init() to preprocess and validate the expression
+!   2. Use evaluate() or evaluate_details() to compute expression values
+!   3. Call destroyfunc() to deallocate resources when done
+!
+! AUTHOR: Original implementation
+! DATE: Updated with documentation header
+!===============================================================================
+
 module precision
 	!Precision:
 	!All real variables defaulted to double precision
-	integer, parameter	 :: realkind = selected_real_kind(p=13,r=200)		
+	integer, parameter	 :: realkind = selected_real_kind(p=13,r=200)
 end module precision
 
 
