@@ -26,8 +26,7 @@
 !   2. Use evaluate() or evaluate_details() to compute expression values
 !   3. Call destroyfunc() to deallocate resources when done
 !
-! AUTHOR: Original implementation
-! DATE: Updated with documentation header
+! AUTHORS: Ivomar Brito Soares (ivomarbsoares@gmail.com) and Wilton Pereira da Silva (wiltonps@uol.com.br)
 !===============================================================================
 
 module precision
