@@ -49,7 +49,7 @@
       <a href="#other-resources">Other Resources</a>
     </li>
     <li>
-      <a href="#-📝-license">License</a>
+      <a href="#-license">License</a>
     </li>
   </ol>
 </details>
