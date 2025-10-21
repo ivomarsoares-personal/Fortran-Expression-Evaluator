@@ -8,7 +8,7 @@ program unit_tests
 !
 ! Authors:
 !   Ivomar B. Soares - ivomarbsoares@gmail.com
-!   Wilton P. Silva - wiltonps@uol.com.br!
+!   Wilton P. Silva - wiltonps@uol.com.br
 !   Claude - AI Assistant
 !
 ! Test Cases:
