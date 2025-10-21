@@ -63,10 +63,10 @@
   </ol>
 </details>
 
-[Wilton Pereira da Silva](https://scholar.google.com.br/citations?user=Vi6q_9gAAAAJ&hl=pt-BR&oi=ao)<sup>a*</sup>, [Cleide M. D. P. S. Silva](https://scholar.google.com.br/citations?user=_dsEjRwAAAAJ&hl=pt-BR&oi=ao)<sup>b</sup>, [Ivomar Brito Soares](https://www.linkedin.com/in/ivomar-brito-soares/)<sup>c</sup>, [José Luís do Nascimento](https://www.linkedin.com/in/jos%C3%A9-lu%C3%ADs-nascimento-b28a7550/)<sup>d</sup>, [Cleiton Diniz Pereira da Silva e Silva](https://www.linkedin.com/in/cleiton-silva-38611915/)<sup>e</sup></br >
+[Ivomar Brito Soares](https://www.linkedin.com/in/ivomar-brito-soares/)<sup>a</sup>, [Wilton Pereira da Silva](https://scholar.google.com.br/citations?user=Vi6q_9gAAAAJ&hl=pt-BR&oi=ao)<sup>b</sup>, [Cleide M. D. P. S. Silva](https://scholar.google.com.br/citations?user=_dsEjRwAAAAJ&hl=pt-BR&oi=ao)<sup>c</sup>, [José Luís do Nascimento](https://www.linkedin.com/in/jos%C3%A9-lu%C3%ADs-nascimento-b28a7550/)<sup>d</sup>, [Cleiton Diniz Pereira da Silva e Silva](https://www.linkedin.com/in/cleiton-silva-38611915/)<sup>e</sup></br >
 
-<sup>a, b</sup> Professors of the Department of Physics (at 2003)</br >
-<sup>c,d</sup> Electrical Engineering and Scientific Initiation Scholarship Students – PIBIC – CNPq (at 2003)</br >
+<sup>b, c</sup> Professors of the Department of Physics (at 2003)</br >
+<sup>a,d</sup> Electrical Engineering and Scientific Initiation Scholarship Students – PIBIC – CNPq (at 2003)</br >
 Sciences and Technology Center</br >
 Federal University of Campina Grande</br >
 Aprígio Veloso St., 882, ZIP Code 58109-970, Campina Grande, PB, Brazil</br >
