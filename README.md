@@ -43,10 +43,10 @@
       <a href="#vi---conclusions">VI – Conclusions</a>
     </li>
     <li>
-      <a href="#references">References</a>
+      <a href="#-references">References</a>
     </li>
     <li>
-      <a href="#other-resources">Other Resources</a>
+      <a href="#-other-resources">Other Resources</a>
     </li>
     <li>
       <a href="#-license">License</a>
