@@ -46,7 +46,16 @@
       <a href="#-references">References</a>
     </li>
     <li>
+      <a href="#-project-structure">Project Structure</a>
+    </li>    
+    <li>
+      <a href="#-contributing">Contributing</a>
+    </li>
+    <li>
       <a href="#-other-resources">Other Resources</a>
+    </li>    
+    <li>
+      <a href="#-thank-you">Thank you</a>
     </li>
     <li>
       <a href="#-license">License</a>
