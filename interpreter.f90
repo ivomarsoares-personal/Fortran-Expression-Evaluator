@@ -26,7 +26,8 @@
 !   2. Use evaluate() or evaluate_details() to compute expression values
 !   3. Call destroyfunc() to deallocate resources when done
 !
-! AUTHORS: Ivomar Brito Soares (ivomarbsoares@gmail.com) and Wilton Pereira da Silva (wiltonps@uol.com.br)
+! AUTHORS: Ivomar Brito Soares (ivomarbsoares@gmail.com) 
+!          Wilton Pereira da Silva (wiltonps@uol.com.br)
 !===============================================================================
 
 module precision
@@ -1459,3 +1460,4 @@ if(item == 1) goto 10
 return
 
 end subroutine
+
