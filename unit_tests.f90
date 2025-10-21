@@ -1,13 +1,14 @@
 program unit_tests
 !
 ! Purpose of the program:
-!   This program performs unit tests for the expression evaluator based on
-!   the test cases provided in issue #12. It validates that the evaluator
-!   produces the correct results for 5 specific mathematical expressions.
+!   This program performs unit tests for the expression evaluator.
+!   It validates that the evaluator produces the correct results for various
+!   mathematical expressions including arithmetic operations, trigonometric,
+!   hyperbolic, logarithmic, and other mathematical functions.
 !
 ! Authors:
 !   Ivomar B. Soares - ivomarbsoares@gmail.com
-!   Wilton P. Silva - wiltonps@uol.com.br!   
+!   Wilton P. Silva - wiltonps@uol.com.br!
 !   Claude - AI Assistant
 !
 ! Test Cases:
@@ -16,6 +17,16 @@ program unit_tests
 !   3. Hyperbolic/exponential expression: 20.69617
 !   4. Inverse trig/hyperbolic expression: 1.559742
 !   5. Combined expression: 1.557368
+!   6. Operator precedence and nested operations
+!   7. Deeply nested function calls
+!   8. Mixed trigonometric and hyperbolic functions
+!   9. Rounding and floor functions
+!   10. Complex division and exponentiation
+!   11. Logarithmic expressions with multiple bases
+!   12. Inverse trigonometric with complex argument
+!   13. Parentheses nesting and order of operations
+!   14. Absolute value with negative expressions
+!   15. Complex expression with all operation types
 !
 
 use interpreter
@@ -148,6 +159,166 @@ write(*,*) '========================='
 ! Same variables as test 4
 func = 'atan(sinh(log(abs(exp(z/x)*sqrt(y+a**c+f*e)))))*cos(log(abs(sqrt(y+a**c+f*e))))'
 expected = 1.557368
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 6: Operator precedence and nested operations
+!==================================================
+write(*,*) 'Test 6: Operator Precedence and Nested Operations'
+write(*,*) '==============================================='
+
+! Set variables for test 6
+variablesvalues(1) = 2.0    ! x
+variablesvalues(2) = 3.0    ! y
+variablesvalues(3) = 4.0    ! z
+variablesvalues(6) = 5.0    ! a
+
+func = 'x+y*z^2-a/x'
+expected = 2.0 + 3.0 * (4.0**2) - 5.0/2.0
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 7: Deeply nested function calls
+!==================================================
+write(*,*) 'Test 7: Deeply Nested Function Calls'
+write(*,*) '=================================='
+
+! Set variables for test 7
+variablesvalues(1) = 0.5    ! x
+variablesvalues(2) = 0.25   ! y
+
+func = 'sqrt(abs(log10(exp(sin(x)+cos(y)))))'
+expected = sqrt(abs(log10(exp(sin(0.5_realkind)+cos(0.25_realkind)))))
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 8: Mixed trigonometric and hyperbolic functions
+!==================================================
+write(*,*) 'Test 8: Mixed Trigonometric and Hyperbolic Functions'
+write(*,*) '=================================================='
+
+! Set variables for test 8
+variablesvalues(1) = 0.3    ! x
+variablesvalues(2) = 0.6    ! y
+variablesvalues(3) = 0.9    ! z
+
+func = 'tanh(x)*cos(y)+sinh(z)/cosh(x)-tan(y*0.5)'
+expected = tanh(0.3_realkind)*cos(0.6_realkind) + sinh(0.9_realkind)/cosh(0.3_realkind) - tan(0.6_realkind*0.5_realkind)
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 9: Rounding and floor functions
+!==================================================
+write(*,*) 'Test 9: Rounding and Floor Functions'
+write(*,*) '=================================='
+
+! Set variables for test 9
+variablesvalues(1) = 3.7    ! x
+variablesvalues(2) = 2.3    ! y
+variablesvalues(3) = 5.5    ! z
+
+func = 'floor(x)+nint(y)*anint(z)-aint(x+y)'
+expected = floor(3.7_realkind) + nint(2.3_realkind)*anint(5.5_realkind) - aint(3.7_realkind+2.3_realkind)
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 10: Complex division and exponentiation
+!==================================================
+write(*,*) 'Test 10: Complex Division and Exponentiation'
+write(*,*) '=========================================='
+
+! Set variables for test 10
+variablesvalues(1) = 2.5    ! x
+variablesvalues(2) = 1.5    ! y
+variablesvalues(3) = 0.5    ! z
+
+func = '(x^y)/(y^z)+sqrt(x*y)/exp(z)'
+expected = (2.5_realkind**1.5_realkind)/(1.5_realkind**0.5_realkind) + sqrt(2.5_realkind*1.5_realkind)/exp(0.5_realkind)
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 11: Logarithmic expressions with multiple bases
+!==================================================
+write(*,*) 'Test 11: Logarithmic Expressions with Multiple Bases'
+write(*,*) '=================================================='
+
+! Set variables for test 11
+variablesvalues(1) = 10.0   ! x
+variablesvalues(2) = 2.718  ! y (approximately e)
+
+func = 'log10(x)*log(y)+exp(log(x/y))'
+expected = log10(10.0_realkind)*log(2.718_realkind) + exp(log(10.0_realkind/2.718_realkind))
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 12: Inverse trigonometric with complex argument
+!==================================================
+write(*,*) 'Test 12: Inverse Trigonometric with Complex Argument'
+write(*,*) '=================================================='
+
+! Set variables for test 12
+variablesvalues(1) = 0.4    ! x
+variablesvalues(2) = 0.3    ! y
+variablesvalues(3) = 0.5    ! z
+
+func = 'asin(x*y)+acos(z)-atan(x/z)*2.0'
+expected = asin(0.4_realkind*0.3_realkind) + acos(0.5_realkind) - atan(0.4_realkind/0.5_realkind)*2.0_realkind
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 13: Parentheses nesting and order of operations
+!==================================================
+write(*,*) 'Test 13: Parentheses Nesting and Order of Operations'
+write(*,*) '=================================================='
+
+! Set variables for test 13
+variablesvalues(1) = 1.0    ! x
+variablesvalues(2) = 2.0    ! y
+variablesvalues(3) = 3.0    ! z
+variablesvalues(6) = 4.0    ! a
+
+func = '((x+y)*(z-a))/(x*y+z*a)+sqrt((x+y+z+a)/a)'
+expected = ((1.0_realkind+2.0_realkind)*(3.0_realkind-4.0_realkind))/(1.0_realkind*2.0_realkind+3.0_realkind*4.0_realkind) + sqrt((1.0_realkind+2.0_realkind+3.0_realkind+4.0_realkind)/4.0_realkind)
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 14: Absolute value with negative expressions
+!==================================================
+write(*,*) 'Test 14: Absolute Value with Negative Expressions'
+write(*,*) '==============================================='
+
+! Set variables for test 14
+variablesvalues(1) = -2.5   ! x
+variablesvalues(2) = 3.5    ! y
+variablesvalues(3) = -1.5   ! z
+
+func = 'abs(x*z)+abs(y+x)-abs(z-y)'
+expected = abs(-2.5_realkind*(-1.5_realkind)) + abs(3.5_realkind+(-2.5_realkind)) - abs(-1.5_realkind-3.5_realkind)
+
+call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
+
+!==================================================
+! Test 15: Complex expression with all operation types
+!==================================================
+write(*,*) 'Test 15: Complex Expression with All Operation Types'
+write(*,*) '=================================================='
+
+! Set variables for test 15
+variablesvalues(1) = 1.2    ! x
+variablesvalues(2) = 2.3    ! y
+variablesvalues(3) = 0.7    ! z
+
+func = 'exp(x)/sqrt(y)+log(abs(x+y))*cos(z)-sin(x^2)+tanh(z/x)'
+expected = exp(1.2_realkind)/sqrt(2.3_realkind) + log(abs(1.2_realkind+2.3_realkind))*cos(0.7_realkind) - sin(1.2_realkind**2) + tanh(0.7_realkind/1.2_realkind)
 
 call test_expression(func, variables, variablesvalues, expected, tolerance, test_count, passed_count)
 
