@@ -92,10 +92,12 @@ In face of this new panorama, the developers of “Ajuste” decided to develop 
 The DOS version of the software didn’t need an expression evaluator because the source code was made of parts and one of them was the specified user function. These files were put together through a lot file and then compiled via a Fortran compiler [12], which was part of the package. Naturally, this type of resource doesn’t exist in Windows due to the complexity and the size of the compilers for this platform, and also due to problems related to limitations concerning the right of use. Therefore, the natural solution to solve such impediment would be the utilization of a parser, but the only one available for Fortran was not considered adequate to the goals of the program in development. Hence, the only alternative was to develop an expression evaluator for the LABFit. </br >
 
 # II - Requirements of the Expression Evaluator
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 In a curve fitting procedure, using the non-linear regression technique, there is an interactive process where an optimum point is obtained through a convergence condition. Such process can involve thousands of iterations, which takes time. This requires that the code for the evaluator of a given expression be efficient and optimized. For the specific case of regression, a parser must attend two requirements. The first one is that, once read the string with the fitting function, the building process of the corresponding arithmetical expression must be done only once, right after the reading of the string. This guarantees great time savings in an iterative process. The second requirement is that, once the expression to be evaluated was interpreted and built, the calculation of such expression for a set of variable values be done in an optimized way, which guarantees the needed speed in a process that may be repeated hundreds of thousands of times.
 
 # III - Evaluating Expressions: General Notions
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 The procedure in which a program receives a string containing a numerical expression such as, for example, (4*3)/10^2, and returns the appropriate answer is generically called expression evaluation. Such procedure is the base of all compilers and language interpreters, of mathematical programs and of everything that needs to interpret mathematical expressions in a way that the computer can handle them.
 The algorithm used for the development of the parser was the recursive descent. Such algorithm is described in several books about the C language (for example [7]), and was adapted to Fortran. As the objective of this paper is just to communicate the development of a parser coded in Fortran and to make available its source code (and not to discuss the algorithm itself), it will only be shown the basic ideas of the performed study.
@@ -175,6 +177,7 @@ To illustrate the presented notions it is shown at figure 1 a parse tree referri
 **Figure 1**
 
 ## IV - The developed Source Code
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 The source code was developed to attend the pre-defined basic requirements in section II for the specific needs of the LABFit, according to the rules that were established in section III. The final result is available at the web site indicated at the Ref. [11].
 </br>
@@ -184,6 +187,7 @@ Basically, the code is constituted of the following parts: 1) the parser itself 
 The philosophy used at the development of this parser was the same normally used in the development of modules, in a general way. This means that the Fortran programmers, which will use the developed parser in their programs, don’t have to know its source code. They just need to add the module interpreter.f90 in their projects, define the string and call the subroutine “init”, followed by the calling of the function “evaluate” as it is shown in the example program test.f90.
 
 # V - Comparative Analysis
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 During the coding process of the parser its developers got known, through the internet, of another similar one developed in Germany [8], just finished. The performance of this parser was tested by adding it to the LABFit and the results were considered good.  Moreover, it was performed a set of tests to compare the performance of the developed evaluator and of the two other ones ([6] and [8]). The tests results would indicate the appropriated parser to be used at the curve fitting software.</br >
 </br>
@@ -256,10 +260,12 @@ Developed parser time (LABFit): 24.518s
 ```
 
 # VI - Conclusions
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 From the analysis of the data presented in section V, it is possible to notice that the developed expression evaluator showed, for the desirable requirements, a performance superior than the other two existing ones, in all performed tests. In this way, the parser was not only used at the software LABFit, but is also being made available on the internet for the free utilization by the interested ones. The parser developers believe, along with the others ones involved in similar projects, in having helped to fill a gap in the libraries of Fortran, which is a language still quite used nowadays by engineers and scientists.</br >
 
 # 📚 References
+<span class="tiny">[\[Top\]](#top)</span>
 </br >
 [1] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
         Publishing Company, pp. 203 – 208, 1987.</br >
@@ -285,6 +291,7 @@ From the analysis of the data presented in section V, it is possible to notice t
 
 
 ## 📁 Project Structure
+<span class="tiny">[\[Top\]](#top)</span>
 
 ```
 Fortran-Expression-Evaluator
@@ -299,6 +306,7 @@ Fortran-Expression-Evaluator
 └── unit_tests.f90                                             # Unit tests     
 ```
 # 🤝 Contributing
+<span class="tiny">[\[Top\]](#top)</span>
 
 Contributions are welcome! Feel free to:
 
@@ -309,15 +317,18 @@ Contributions are welcome! Feel free to:
 5. Open a Pull Request
 
 # 📚 Other Resources
+<span class="tiny">[\[Top\]](#top)</span>
 
 * The [Calmat: a Fortran Equation Parser Involving Matrix Operations](https://github.com/hassaniriad/calmat) is based on this interpreter.
 * If you are using the Fortran Expression Evaluator please let us know! Emails are in the test.f90 file. Mark star ⭐ if you like the project.
 
 ## 🌟 Thank you
+<span class="tiny">[\[Top\]](#top)</span>
 
 * [Prof. Wilton Pereira da Silva](https://scholar.google.com/citations?view_op=search_authors&mauthors=wilton+pereira+da+silva&hl=pt-BR&oi=ao) for being such an amazing advisor.
 
 # 📝 License
+<span class="tiny">[\[Top\]](#top)</span>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
