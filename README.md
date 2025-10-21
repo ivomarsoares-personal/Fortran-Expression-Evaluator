@@ -286,7 +286,7 @@ From the analysis of the data presented in section V, it is possible to notice t
 
 ```
 Fortran-Expression-Evaluator
-├── INSTRUCTIONS.md                                            # Instructions on how to run the interpreter
+├── INSTRUCTIONS.md                                            # Instructions on how to run the interpreter and the unit tests
 ├── interpreter.f90                                            # Interpreter source code
 ├── LICENSE                                                    # MIT License File
 ├── papers
