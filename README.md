@@ -1,3 +1,4 @@
+<a name="top"></a>
 <p align="center">
 <h1>🌟 AN EXPRESSION EVALUATOR / INTERPRETER / PARSER IN FORTRAN</h1>
 </p>
@@ -81,7 +82,7 @@ This paper aims to communicate the development of an expression evaluator (funct
 </br >
 Expression evaluator; function parser; open source; Fortran.
 
-# I - Introduction
+# I - Introduction <small<[Top](#top)</small>
 </br >
 Few years ago, professors of the Instrumentation Group for the Teaching of Physics (Grupo de Instrumentação para o Ensino da Física, GIEF) of the Department of Physics (Departamento de Física, DF) of the Sciences and Technology Center (Centro de Ciências e Tecnologia, CCT) at the Federal University of Paraíba (Universidade Federal da Paraíba, UFPB) developed, at the DOS platform, a curve fitting program using the Fortran 77 programming language. The program, at that time called “Ajuste”, was designed to fit a function to experimental data using the non-linear regression technique. This program was initially used by students of the Experimental Physics I course offered by DF/CCT/UFPB, and posteriorly by students and researchers of other Brazilian universities. As it is known, the DOS platform has faced a constant decline in its use, and has been systematically substituted by new platforms, more powerful and friendly. Nowadays its use practically doesn’t exist and the programs already developed for this platform needed to be rebuilt in these new ones. </br >
 </br>
