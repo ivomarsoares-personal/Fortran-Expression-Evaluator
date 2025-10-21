@@ -65,12 +65,12 @@
 
 Wilton Pereira da Silva<sup>a*</sup>, Cleide M. D. P. S. Silva<sup>b</sup>, Ivomar Brito Soares<sup>c</sup>, José Luís do Nascimento<sup>d</sup>, Cleiton Diniz Pereira da Silva e Silva<sup>e</sup></br >
 
-<sup>a, b</sup> Professors of the Department of Physics</br >
-<sup>c,d</sup> Electrical Engineering and Scientific Initiation Scholarship Students – PIBIC – CNPq</br >
+<sup>a, b</sup> Professors of the Department of Physics (at 2003)</br >
+<sup>c,d</sup> Electrical Engineering and Scientific Initiation Scholarship Students – PIBIC – CNPq (at 2003)</br >
 Sciences and Technology Center</br >
 Federal University of Campina Grande</br >
 Aprígio Veloso St., 882, ZIP Code 58109-970, Campina Grande, PB, Brazil</br >
-e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technology</br >
+e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technology(at 2003)</br >
 Marechal Eduardo Gomes Sq., 50, Vila das Acácias, ZIP Code 12228-900, São José dos Campos, SP, Brazil</br >
 
 **Abstract**</br >
