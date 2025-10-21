@@ -6,8 +6,8 @@ program unit_tests
 !   produces the correct results for 5 specific mathematical expressions.
 !
 ! Authors:
-!   Wilton P. Silva - wiltonps@uol.com.br
 !   Ivomar B. Soares - ivomarbsoares@gmail.com
+!   Wilton P. Silva - wiltonps@uol.com.br!   
 !   Claude - AI Assistant
 !
 ! Test Cases:
