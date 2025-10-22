@@ -278,7 +278,7 @@ From the analysis of the data presented in section V, it is possible to notice t
 [7] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
 [8] - R. Schmehl, “German Parser”, online, available on the internet at
           http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html.</br >
-[<a id="ref_9"></a>9] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
+[<a name="ref_9">9</a>] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
         http://labfit.net.</br >
 [10] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
 [11] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
