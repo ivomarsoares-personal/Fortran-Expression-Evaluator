@@ -291,8 +291,8 @@ From the analysis of the data presented in section V, it is possible to notice t
 ```
 Fortran-Expression-Evaluator
 ├── images
-│   └── banner.jpeg		                               # Banner image on top of this readme file								
-├── install_gfortran_build_and_run_unit_tests.sh                # Bash script to install gfortran, build the source files and run the unit tests
+│   └── banner.jpeg		                                         # Banner image on top of this readme file								
+├── install_gfortran_build_and_run_unit_tests.sh               # Bash script to install gfortran, build the source files and run the unit tests
 ├── INSTRUCTIONS.md                                            # Instructions on how to run the interpreter and the unit tests
 ├── interpreter.f90                                            # Interpreter source code
 ├── LICENSE                                                    # MIT License File
