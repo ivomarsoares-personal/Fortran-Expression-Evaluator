@@ -73,9 +73,7 @@ Aprígio Veloso St., 882, ZIP Code 58109-970, Campina Grande, PB, Brazil</br >
 e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technology (at 2003)</br >
 Marechal Eduardo Gomes Sq., 50, Vila das Acácias, ZIP Code 12228-900, São José dos Campos, SP, Brazil</br >
 
-<p align="center">
 ![Banner](images/banner.jpeg)
-</p>
 
 **Abstract**</br >
 </br >
