@@ -263,7 +263,7 @@ From the analysis of the data presented in section V, it is possible to notice t
 
 # 📚 References
 </br >
-[**1**] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
+[<b>1</b>] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
         Publishing Company, pp. 203 – 208, 1987.</br >
 [2] - F. L Bauer, F. L. De Remer, A. P. Ershov, D. Gries, M. Griffiths, U. Hill, J. J. Horning, C. H. A. 
           Koster, W. M. Mckeeman, P. C. Poole, W. M. Waite, Compiler Construction – An Advanced Course, 
