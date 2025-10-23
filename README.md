@@ -265,25 +265,25 @@ From the analysis of the data presented in section V, it is possible to notice t
 </br >
 [<b>1</b>] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
         Publishing Company, pp. 203 – 208, 1987.</br >
-[2] - F. L Bauer, F. L. De Remer, A. P. Ershov, D. Gries, M. Griffiths, U. Hill, J. J. Horning, C. H. A. 
+[<b>2</b>] - F. L Bauer, F. L. De Remer, A. P. Ershov, D. Gries, M. Griffiths, U. Hill, J. J. Horning, C. H. A. 
           Koster, W. M. Mckeeman, P. C. Poole, W. M. Waite, Compiler Construction – An Advanced Course, 
           Springer-Verlag, 2nd Edition, p. 6, 1976.</br >
-[3] - S. J. Chapman, Fortran 90/95 for Scientists and Engineers, WCB/McGraw-Hill, 1st Edition, 1998.
-[4] - C. N. Fischer and R. J. LeBlanc Jr., Crafting a Compiler With C, The  Benjamin/Cummings Publishing 
+[<b>3</b>] - S. J. Chapman, Fortran 90/95 for Scientists and Engineers, WCB/McGraw-Hill, 1st Edition, 1998.
+[<b>4</b>] - C. N. Fischer and R. J. LeBlanc Jr., Crafting a Compiler With C, The  Benjamin/Cummings Publishing 
         Company, pp. 382 – 387, 1991.</br >
-[5] - N. Laurence, Compaq Visual Fortran – A Guide to Creating Windows Applications, Digital Press, 
+[<b>5</b>] - N. Laurence, Compaq Visual Fortran – A Guide to Creating Windows Applications, Digital Press, 
         Woburn MA, USA, 2002.</br >
-[6] - S. Midgley, Department of Physics, University of Western Australia, “Australian Parser”, online
+[<b>6</b>] - S. Midgley, Department of Physics, University of Western Australia, “Australian Parser”, online
         available on the internet at http://www.netspace.net.au/~smidgley/fortran/. *</br >
-[7] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
-[8] - R. Schmehl, “German Parser”, online, available on the internet at
+[<b>7</b>] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
+[<b>8</b>] - R. Schmehl, “German Parser”, online, available on the internet at
           http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html. *</br >
-[9] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
+[<b>9</b>] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
         http://labfit.net.</br >
-[10] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
-[11] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
+[<b>10</b>] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
+[<b>11</b>] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
           https://github.com/ivomarb/Fortran-Expression-Evaluator/tree/master.</br >
-[12] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
+[<b>12</b>] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
 * These links are now broken, they are left here for historical purposes.
 
 ## 📁 Project Structure
