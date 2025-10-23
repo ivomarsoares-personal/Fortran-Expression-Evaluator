@@ -274,17 +274,17 @@ From the analysis of the data presented in section V, it is possible to notice t
 [5] - N. Laurence, Compaq Visual Fortran – A Guide to Creating Windows Applications, Digital Press, 
         Woburn MA, USA, 2002.</br >
 [6] - S. Midgley, Department of Physics, University of Western Australia, “Australian Parser”, online
-        available on the internet at http://www.netspace.net.au/~smidgley/fortran/.</br >
+        available on the internet at http://www.netspace.net.au/~smidgley/fortran/. *</br >
 [7] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
 [8] - R. Schmehl, “German Parser”, online, available on the internet at
-          http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html.</br >
+          http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html. *</br >
 [9] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
         http://labfit.net.</br >
 [10] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
 [11] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
           https://github.com/ivomarb/Fortran-Expression-Evaluator/tree/master.</br >
 [12] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
-
+* These links are now broken, they are left here for historical purposes.
 
 ## 📁 Project Structure
 
