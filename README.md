@@ -74,7 +74,7 @@ e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technolo
 Marechal Eduardo Gomes Sq., 50, Vila das Acácias, ZIP Code 12228-900, São José dos Campos, SP, Brazil</br >
 
 <p align="center">
-<img src="images/banner.jpeg" alt="Banner" width="600">
+<img src="images/banner.jpeg" alt="Banner" width="700">
 </p>
 
 **Abstract**</br >
