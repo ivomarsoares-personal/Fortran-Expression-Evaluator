@@ -74,7 +74,7 @@ e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technolo
 Marechal Eduardo Gomes Sq., 50, Vila das Acácias, ZIP Code 12228-900, São José dos Campos, SP, Brazil</br >
 
 <p align="center">
-<img src="images/banner.jpeg" alt="Banner" width="600">
+<img src="images/banner.jpeg" alt="Banner" width="700">
 </p>
 
 **Abstract**</br >
@@ -89,9 +89,9 @@ Expression evaluator; function parser; open source; Fortran.
 </br >
 Few years ago, professors of the Instrumentation Group for the Teaching of Physics (Grupo de Instrumentação para o Ensino da Física, GIEF) of the Department of Physics (Departamento de Física, DF) of the Sciences and Technology Center (Centro de Ciências e Tecnologia, CCT) at the Federal University of Paraíba (Universidade Federal da Paraíba, UFPB) developed, at the DOS platform, a curve fitting program using the Fortran 77 programming language. The program, at that time called “Ajuste”, was designed to fit a function to experimental data using the non-linear regression technique. This program was initially used by students of the Experimental Physics I course offered by DF/CCT/UFPB, and posteriorly by students and researchers of other Brazilian universities. As it is known, the DOS platform has faced a constant decline in its use, and has been systematically substituted by new platforms, more powerful and friendly. Nowadays its use practically doesn’t exist and the programs already developed for this platform needed to be rebuilt in these new ones. </br >
 </br>
-In face of this new panorama, the developers of “Ajuste” decided to develop a new version of this program for the Windows platform and it was named “LAB Fit Curve Fitting Software” (LABFit) [9]. As it’s known, a curve fitting software normally has a library with a set of pre-defined functions and an option for the users to be able to write their own fitting function, which requires a specific code called “expression evaluator” (parser) for the calculation of the function for a given set of values of the independent variables. Beyond the study of new commands of Fortran 90 [3] and of the graphical part ([5] and [10]), during the migration process there was the need to solve one problem: how to obtain an expression evaluator, in open source, developed in Fortran, whose implementation was adequate to the necessities of the program in development. In reality, repetitive searches on the internet ended in only one evaluator coded in Fortran, which has been developed in Australia [6]. But the “Australian parser“, although it was of easy incorporation into the program and useful in many applications, was prohibitively slow for the required purposes: non-linear regression. During the search for a result in a curve fitting program,  the convergence process may take hundreds of thousands of iterations and it requires an extremely efficient and optimized code for the evaluation of parameters of the fitting function.</br >
+In face of this new panorama, the developers of “Ajuste” decided to develop a new version of this program for the Windows platform and it was named “LAB Fit Curve Fitting Software” (LABFit) [<b>9</b>]. As it’s known, a curve fitting software normally has a library with a set of pre-defined functions and an option for the users to be able to write their own fitting function, which requires a specific code called “expression evaluator” (parser) for the calculation of the function for a given set of values of the independent variables. Beyond the study of new commands of Fortran 90 [<b>3</b>] and of the graphical part ([<b>5</b>] and [<b>10</b>]), during the migration process there was the need to solve one problem: how to obtain an expression evaluator, in open source, developed in Fortran, whose implementation was adequate to the necessities of the program in development. In reality, repetitive searches on the internet ended in only one evaluator coded in Fortran, which has been developed in Australia [<b>6</b>]. But the “Australian parser“, although it was of easy incorporation into the program and useful in many applications, was prohibitively slow for the required purposes: non-linear regression. During the search for a result in a curve fitting program,  the convergence process may take hundreds of thousands of iterations and it requires an extremely efficient and optimized code for the evaluation of parameters of the fitting function.</br >
 </br>
-The DOS version of the software didn’t need an expression evaluator because the source code was made of parts and one of them was the specified user function. These files were put together through a lot file and then compiled via a Fortran compiler [12], which was part of the package. Naturally, this type of resource doesn’t exist in Windows due to the complexity and the size of the compilers for this platform, and also due to problems related to limitations concerning the right of use. Therefore, the natural solution to solve such impediment would be the utilization of a parser, but the only one available for Fortran was not considered adequate to the goals of the program in development. Hence, the only alternative was to develop an expression evaluator for the LABFit. </br >
+The DOS version of the software didn’t need an expression evaluator because the source code was made of parts and one of them was the specified user function. These files were put together through a lot file and then compiled via a Fortran compiler [<b>12</b>], which was part of the package. Naturally, this type of resource doesn’t exist in Windows due to the complexity and the size of the compilers for this platform, and also due to problems related to limitations concerning the right of use. Therefore, the natural solution to solve such impediment would be the utilization of a parser, but the only one available for Fortran was not considered adequate to the goals of the program in development. Hence, the only alternative was to develop an expression evaluator for the LABFit. </br >
 
 # II - Requirements of the Expression Evaluator
 </br >
@@ -100,7 +100,7 @@ In a curve fitting procedure, using the non-linear regression technique, there i
 # III - Evaluating Expressions: General Notions
 </br >
 The procedure in which a program receives a string containing a numerical expression such as, for example, (4*3)/10^2, and returns the appropriate answer is generically called expression evaluation. Such procedure is the base of all compilers and language interpreters, of mathematical programs and of everything that needs to interpret mathematical expressions in a way that the computer can handle them.
-The algorithm used for the development of the parser was the recursive descent. Such algorithm is described in several books about the C language (for example [7]), and was adapted to Fortran. As the objective of this paper is just to communicate the development of a parser coded in Fortran and to make available its source code (and not to discuss the algorithm itself), it will only be shown the basic ideas of the performed study.
+The algorithm used for the development of the parser was the recursive descent. Such algorithm is described in several books about the C language (for example [<b>7</b>]), and was adapted to Fortran. As the objective of this paper is just to communicate the development of a parser coded in Fortran and to make available its source code (and not to discuss the algorithm itself), it will only be shown the basic ideas of the performed study.
 
 ## III.1 - Elements of an Expression: Precedence
 </br >
@@ -123,7 +123,7 @@ a+b*log(x1)+c*log(x1)**2+d*log(x2)+e*log(x2)**2
 ```
 
 </br >
-At the development of a parser, an important concept is the operators and functions precedence [1]. Such concept states which operation must be performed first and, therefore, defines the sequence in which the operations must be executed with the purpose to obtain a correct evaluation of the interpreted expression. For the purposes of this evaluator it was assumed the precedence presented in Table 1.</br>
+At the development of a parser, an important concept is the operators and functions precedence [<b>1</b>]. Such concept states which operation must be performed first and, therefore, defines the sequence in which the operations must be executed with the purpose to obtain a correct evaluation of the interpreted expression. For the purposes of this evaluator it was assumed the precedence presented in Table 1.</br>
 </br>
 
 
@@ -138,7 +138,7 @@ Naturally, this expression has as result the value 4. Although it seems to be an
 
 ## III.2 - Analysis of an Expression
 </br >
-There are several possibilities to analyze and build a mathematical expression. In the case of a recursive descent parser, the expressions are imagined as being recursive structures, that means, such expressions are defined in terms of themselves. Just to have a basic notion about the rules and the ideas used in the development of an evaluator; imagine an expression containing the following elements: +, -, *, /. In this case, the expression can be defined, from the reading of a string, with the utilization of the following basic rules [4]:
+There are several possibilities to analyze and build a mathematical expression. In the case of a recursive descent parser, the expressions are imagined as being recursive structures, that means, such expressions are defined in terms of themselves. Just to have a basic notion about the rules and the ideas used in the development of an evaluator; imagine an expression containing the following elements: +, -, *, /. In this case, the expression can be defined, from the reading of a string, with the utilization of the following basic rules [<b>4</b>]:
 </br>
 </br>
 <p align="center">
@@ -171,14 +171,14 @@ There are two basic points to be remembered about this recursive vision of the e
 
 ## III.3 - Parse Tree
 </br >
-To illustrate the presented notions it is shown at figure 1 a parse tree referring to the recursive descent process for the expression: – A + 5 * B / (B – 1) [2].
+To illustrate the presented notions it is shown at figure 1 a parse tree referring to the recursive descent process for the expression: – A + 5 * B / (B – 1) [<b>2</b>].
 
 ![fortran1](https://user-images.githubusercontent.com/33180566/32405690-d6ee6492-c148-11e7-909f-21591ee5c3a4.JPG)</br >
 **Figure 1**
 
 ## IV - The developed Source Code
 </br >
-The source code was developed to attend the pre-defined basic requirements in section II for the specific needs of the LABFit, according to the rules that were established in section III. The final result is available at the web site indicated at the Ref. [11].
+The source code was developed to attend the pre-defined basic requirements in section II for the specific needs of the LABFit, according to the rules that were established in section III. The final result is available at the web site indicated at the Ref. [<b>11</b>].
 </br>
 </br>
 Basically, the code is constituted of the following parts: 1) the parser itself comprised in a module called interpreter.f90, 2) the main program, called test.f90, containing some examples. Once the main program has the information about the string, it calls a subroutine of the module interpreter.f90, called “init”, whose function is to make the interpretation, that means, the building of the mathematical expression. With this task accomplished, the function that evaluates the expression, called “evaluate”, is evoked and the value of the expression is returned for a set of variable values. The process of evaluating an expression can be repeated for other set of variables, without the need of rebuilding the expression, for how many times it may be necessary. It is also possible, in the same execution, to change the string and to repeat the interpretation and evaluation processes for the new specified expression. To do so, it is only needed to call the subroutine named “destroyfunc”, before informing the new string and repeating the process previously described.</br >
@@ -187,7 +187,7 @@ The philosophy used at the development of this parser was the same normally used
 
 # V - Comparative Analysis
 </br >
-During the coding process of the parser its developers got known, through the internet, of another similar one developed in Germany [8], just finished. The performance of this parser was tested by adding it to the LABFit and the results were considered good.  Moreover, it was performed a set of tests to compare the performance of the developed evaluator and of the two other ones ([6] and [8]). The tests results would indicate the appropriated parser to be used at the curve fitting software.</br >
+During the coding process of the parser its developers got known, through the internet, of another similar one developed in Germany [<b>8</b>], just finished. The performance of this parser was tested by adding it to the LABFit and the results were considered good.  Moreover, it was performed a set of tests to compare the performance of the developed evaluator and of the two other ones ([<b>6</b>] and [<b>8</b>]). The tests results would indicate the appropriated parser to be used at the curve fitting software.</br >
 </br>
 The tests consisted on the realization of five million iterations for twenty five distinct expressions, measuring the time that each evaluator took to perform such task. The tests were performed in a computer Intel Pentium III, 128 Mbytes of RAM memory and the compilation was done at the Compaq Visual Fortran (CVF 6.5) studio, using the QuickWin Application option. The elapsed time for the direct calculation, which takes the smallest execution time, of each compiled expression was also measured in order to have an idea of the slowness of a Fortran coded parser execution. The performance of the evaluators was analyzed only in terms of the elapsed time for the tasks execution, because the numerical results of all of them were equivalent and compatible with the numerical result of the compiled expression. Next, it will be shown the obtained results for five, among the twenty five, tested expressions. 
 </br>
@@ -263,36 +263,36 @@ From the analysis of the data presented in section V, it is possible to notice t
 
 # 📚 References
 </br >
-[1] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
+[<b>1</b>] - A. V. Aho, R. Sethi, J. D. Ulman, Compilers – Principles, Techniques, and Tools, Addison-Wesley 
         Publishing Company, pp. 203 – 208, 1987.</br >
-[2] - F. L Bauer, F. L. De Remer, A. P. Ershov, D. Gries, M. Griffiths, U. Hill, J. J. Horning, C. H. A. 
+[<b>2</b>] - F. L Bauer, F. L. De Remer, A. P. Ershov, D. Gries, M. Griffiths, U. Hill, J. J. Horning, C. H. A. 
           Koster, W. M. Mckeeman, P. C. Poole, W. M. Waite, Compiler Construction – An Advanced Course, 
           Springer-Verlag, 2nd Edition, p. 6, 1976.</br >
-[3] - S. J. Chapman, Fortran 90/95 for Scientists and Engineers, WCB/McGraw-Hill, 1st Edition, 1998.
-[4] - C. N. Fischer and R. J. LeBlanc Jr., Crafting a Compiler With C, The  Benjamin/Cummings Publishing 
+[<b>3</b>] - S. J. Chapman, Fortran 90/95 for Scientists and Engineers, WCB/McGraw-Hill, 1st Edition, 1998.
+[<b>4</b>] - C. N. Fischer and R. J. LeBlanc Jr., Crafting a Compiler With C, The  Benjamin/Cummings Publishing 
         Company, pp. 382 – 387, 1991.</br >
-[5] - N. Laurence, Compaq Visual Fortran – A Guide to Creating Windows Applications, Digital Press, 
+[<b>5</b>] - N. Laurence, Compaq Visual Fortran – A Guide to Creating Windows Applications, Digital Press, 
         Woburn MA, USA, 2002.</br >
-[6] - S. Midgley, Department of Physics, University of Western Australia, “Australian Parser”, online
-        available on the internet at http://www.netspace.net.au/~smidgley/fortran/.</br >
-[7] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
-[8] - R. Schmehl, “German Parser”, online, available on the internet at
-          http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html.</br >
-[9] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
+[<b>6</b>] - S. Midgley, Department of Physics, University of Western Australia, “Australian Parser”, online
+        available on the internet at http://www.netspace.net.au/~smidgley/fortran/. *</br >
+[<b>7</b>] - H. Schildt, C Completo e Total, Makron Books, 3rd edition, pp. 584 – 606, 1996.</br >
+[<b>8</b>] - R. Schmehl, “German Parser”, online, available on the internet at
+          http://www.its.uni-karlsruhe.de/~schmehl/functionparserE.html. *</br >
+[<b>9</b>] - W. P. Silva, C. M. D. P. S. Silva, LAB Fit Curve Fitting Software, online, available on the internet at   
         http://labfit.net.</br >
-[10] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
-[11] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
+[<b>10</b>] - W. P. Silva et al, [VFortran Tutorial](https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/7_43_979.pdf).</br >
+[<b>11</b>] - I. B. Soares, J. L. Nascimento, W. P. Silva, Parser Source Code, online, available on the internet at 
           https://github.com/ivomarb/Fortran-Expression-Evaluator/tree/master.</br >
-[12] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
-
+[<b>12</b>] - University of Waterloo, WATFOR77.EXE V 3.1, August 1989.</br >
+* These links are now broken, they are left here for historical purposes.
 
 ## 📁 Project Structure
 
 ```
 Fortran-Expression-Evaluator
 ├── images
-│   └── banner.jpeg		                               # Banner image on top of this readme file								
-├── install_gfortran_build_and_run_unit_tests.sh                # Bash script to install gfortran, build the source files and run the unit tests
+│   └── banner.jpeg		                                       # Banner image on top of this readme file								
+├── install_gfortran_build_and_run_unit_tests.sh               # Bash script to install gfortran, build the source files and run the unit tests
 ├── INSTRUCTIONS.md                                            # Instructions on how to run the interpreter and the unit tests
 ├── interpreter.f90                                            # Interpreter source code
 ├── LICENSE                                                    # MIT License File
