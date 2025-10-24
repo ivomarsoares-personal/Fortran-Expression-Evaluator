@@ -81,7 +81,9 @@ This paper aims to communicate the development of an expression evaluator (funct
 </br >
 Expression evaluator; function parser; open source; Fortran.
 
-![banner](images/banner.png)
+<p align="center">
+<img src="images/banner.png" alt="Banner">
+</p>
 
 # I - Introduction 
 </br >
