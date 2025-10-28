@@ -73,10 +73,6 @@ Aprígio Veloso St., 882, ZIP Code 58109-970, Campina Grande, PB, Brazil</br >
 e Master’s Degree in Electronic Engineering, Aeronautics Institute of Technology (at 2003)</br >
 Marechal Eduardo Gomes Sq., 50, Vila das Acácias, ZIP Code 12228-900, São José dos Campos, SP, Brazil</br >
 
-<p align="center">
-<img src="images/banner.jpeg" alt="Banner" width="700">
-</p>
-
 **Abstract**</br >
 </br >
 This paper aims to communicate the development of an expression evaluator (function parser) for the Fortran programming language, to make its source code available and to show the results of a comparative analysis among its performance and two other available ones (the only ones found in successive searches on the internet), in open source, for this language. The developed parser presented a performance significantly superior, in speed, to the similar tested.
@@ -84,6 +80,8 @@ This paper aims to communicate the development of an expression evaluator (funct
 **Keywords**</br >
 </br >
 Expression evaluator; function parser; open source; Fortran.
+
+![Banner showing a computer with an expression on screen and the text Expression evaluator in Fortran](https://github.com/user-attachments/assets/af008a78-c94f-4f34-8b8a-21ab731e045a)
 
 # I - Introduction 
 </br >
