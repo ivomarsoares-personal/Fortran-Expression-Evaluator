@@ -311,6 +311,7 @@ Contributions are welcome! Feel free to:
 
 # 📚 Other Resources
 
+* This Fortran expression evaluator is used in [LAB Fit Curve Fitting Software](https://labfit.net/).
 * The [Calmat: a Fortran Equation Parser Involving Matrix Operations](https://github.com/hassaniriad/calmat) is based on this interpreter.
 * If you are using the Fortran Expression Evaluator please let us know! Emails are in the test.f90 file. Mark star ⭐ if you like the project.
 
